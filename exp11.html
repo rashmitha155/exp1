@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script src="" defer>
+        function validation(){
+            if(name.value.length<6 || name.value.length>30)
+                {
+                    alert('name length should be morethan 6 and lessthan 30')
+                }
+            if(!password.value.match(/^{5,15}$/))
+            {
+                alert('password must be atleat 5 to 15 characters')
+            }
+            if(!phonenumber.value.match(/^[1-9][0-9]{9}$/)){
+                alert('phone nummber must be 10 chracters')
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form name="REGISTRATION" class="registration-form" onsubmit="">
+        <label for="name">Nmae:</label>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="" id="" placeholder="Enter your Password">
+        <br><br>
+        <label for="E-mail">E-mail:</label>
+        <input type="email" name="" id="" placeholder="Enter Your Email">
+        <br><br>
+        <label for="phonenumber">PhoneNumber:</label>
+        <input type="number" name="" id="" placeholder="Enter Your Number">
+        <br><br>
+        <label for="gender">Gender:</label>&nbsp;
+        Male: <input type="radio" name="gender" value="Male">
+        Female: <input type="radio" name="gender" value="Female">
+        <br><br>
+        <label for="language">Language:</label>
+            <select name="language" id="language">
+                <option value="">Select Languages</option>
+                <option value="English">English</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Tamil">Tamil</option>
+            </select>
+        <br><br>
+        <label for="address">Address:</label>
+        <br>
+        <textarea name="about" id="about" cols="30" rows="10" placeholder="Write about yourself..."></textarea>
+        <br><br>
+        <input type="button" value="submit" onclick="validation()">
+    </form>
+</body>
+</html>
